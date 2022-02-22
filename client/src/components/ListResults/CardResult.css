@@ -1,0 +1,14 @@
+.icon-result {
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
+button {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.lema::before {
+    content:  "Lema: ";
+    font-style: italic;
+}

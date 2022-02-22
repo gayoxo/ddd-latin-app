@@ -1,0 +1,27 @@
+.icon-ficha {
+    width:  20vh;
+    height: 20vh;
+    object-fit: cover;
+}
+.ficha-lema, .ficha-caja {
+    border: 1px solid #e0e0e0;
+    padding: 1em;
+    margin-top: 1em;
+}
+.ficha-lema::before {
+    content:  "Lema: ";
+    font-style: italic;
+}
+
+.indent {
+    padding-left: 1.5rem;
+    font-style: italic;
+}
+
+.cabecera-verbo {
+    background-color: #505050;
+    color: #fff;
+    padding: 0.1em;
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+}

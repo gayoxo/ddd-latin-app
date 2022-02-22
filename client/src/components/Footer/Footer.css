@@ -1,0 +1,18 @@
+footer.page-footer {
+    color: #fff;
+    background-color: #454545;
+}
+footer.page-footer .list-unstyled a {
+    text-decoration: none;
+    color: #fff;
+}
+footer.page-footer .list-unstyled a:hover {
+    text-decoration: underline;
+}
+.footer-copyright a {
+    text-decoration: none;
+    color: #fff;
+}
+.footer-copyright a:hover {
+    text-decoration: underline;
+}
