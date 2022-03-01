@@ -6,9 +6,9 @@ import Categoria from "./Categoria";
 const CardFicha = ({ word }) => {
   var dataWordCategory = null;
   if (word.attr[0] != null) {
-    if (word.attr[0].attr[2] != null) {
-      dataWordCategory = word.attr[0].attr[2].attr;
-    }
+    word.attr[0].attr.forEach(element => {
+      if(element.name=="Datos") dataWordCategory = element.attr;
+    });
   }
   
   return (

@@ -61,7 +61,7 @@ const Navigation = ({setIdDocs}) => {
                     <Loading />
                 ) : (
                     <div className="d-grid gap-2">
-                        <Button variant="outline-danger" href="/categorias">
+                        <Button variant="outline-secondary" href="/categorias">
                             Reiniciar
                         </Button>
                         {

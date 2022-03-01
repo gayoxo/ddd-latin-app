@@ -32,7 +32,7 @@ const CardResult = ({ result }) => {
             <div className="lema" dangerouslySetInnerHTML={{ __html: result.desc }}></div>
           </Col>
           <Col xs={12} md={2} className="d-flex justify-content-center">
-            <Button variant="danger" onClick={handleShow}>Ficha</Button>
+            <Button variant="outline-danger" onClick={handleShow}>Ficha</Button>
           </Col>
         </Row>
       </ListGroup.Item>

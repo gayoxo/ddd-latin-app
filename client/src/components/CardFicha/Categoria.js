@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
-import { Card, ListGroup } from "react-bootstrap";
 
-const Categoria = (label, children) => {
+const Categoria = ( label ) => {
   
   const [claseCaja, setClaseCaja] = useState('');
   const [claseCabecera, setClaseCabecera] = useState('');

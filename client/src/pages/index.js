@@ -12,6 +12,8 @@ import Home from './home';
 import PautasUso from './footer/pautas-uso';
 import PautasUsoIcono from './footer/iconos';
 import PautasUsoAbreviaturas from './footer/abreviaturas';
+import EquipoTrabajo from './footer/equipo-trabajo';
+import PublicacionesRelacionadas from './footer/publicaciones-relacionadas';
 
 const Pages = ({diccionario}) => {
     return(
@@ -36,6 +38,12 @@ const Pages = ({diccionario}) => {
             </Route>
             <Route path="/abreviaturas">
                 <PautasUsoAbreviaturas />
+            </Route>
+            <Route path="/equipo-trabajo">
+                <EquipoTrabajo />
+            </Route>
+            <Route path="/publicaciones-relacionadas">
+                <PublicacionesRelacionadas />
             </Route>
         </Router>
     );
