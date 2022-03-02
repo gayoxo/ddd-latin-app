@@ -36,8 +36,13 @@ const Navigation = ({setIdDocs}) => {
         setLoading(true);
         getCategoriesBase().then(
             res => {
-                setCategorias(res.val)
-                setResultCategorias(res.val);  
+                setCategorias(res.val);
+                // NO mostramos 627 y 619
+                const filteredCategorias = res.val.filter(function(element){
+                    if(element.id!=627 && element.id!=619)
+                        return true;
+                });
+                setResultCategorias(filteredCategorias);  
             }
         );
         setLoading(false);
