@@ -7,6 +7,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const PORT = process.env.PORT || 3001;
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
@@ -29,7 +32,7 @@ app.get("/api/documentos", (req, res) => {
 	console.log("GET /api/documentos");
 	(async () => {
 		try {
-			const response = await axios.get('https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getdoc?keyclavy=3023896634743');
+			const response = await axios.get('https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getdoc?keyclavy='+process.env.API_KEY);
 			res.json(response.data);
 		} catch (error) {
 			console.log(error);
@@ -43,7 +46,7 @@ app.get("/api/documento/:id", (req, res) => {
 	const idDoc = req.params.id;
 	(async () => {
 		try {
-			const response = await axios.get('https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getdoc/' + idDoc + '?keyclavy=3023896634743');
+			const response = await axios.get('https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getdoc/' + idDoc + '?keyclavy='+ process.env.API_KEY);
 			res.json(response.data);
 		} catch (error) {
 			console.log(error);
@@ -56,7 +59,7 @@ app.get("/api/categorias", (req, res) => {
 	console.log("GET /api/getcat");
 	(async () => {
 		try {
-			const response = await axios.get('https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCat?keyclavy=3023896634743');
+			const response = await axios.get('https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCat?keyclavy=' + process.env.API_KEY);
 			res.json(response.data);
 		} catch (error) {
 			console.log(error);
@@ -70,7 +73,7 @@ app.get("/api/documentos/categoria/:id", (req, res) => {
 	const idCategory = req.params.id;
 	(async () => {
 		try {
-			const url = "https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCatDoc/" + idCategory + "?keyclavy=3023896634743"
+			const url = "https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCatDoc/" + idCategory + "?keyclavy=" + process.env.API_KEY;
 			const response = await axios.get(url);
 			res.json(response.data);
 		} catch (error) {
@@ -87,7 +90,7 @@ app.post("/api/documentos/categoria/:id", (req, res) => {
 		try {
 			var config = {
 				method: 'post',
-				url: 'https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCatDoc/'+idCategory+'?keyclavy=1205406630924500',
+				url: 'https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCatDoc/'+idCategory+'?keyclavy=' + process.env.API_KEY,
 				headers: { },
 			};
 			const response = await axios(config);
@@ -101,13 +104,12 @@ app.post("/api/documentos/categoria/:id", (req, res) => {
 /// Documentos de un valor
 app.post("/api/documentos/categoria/:id/valor/:val", (req, res) => {
 	console.log("POST /api/documentos/categoria/" + req.params.id + "/valor/" + req.params.val);
-	///console.log("Body: " + JSON.stringify(req.body));
 	const idCategory = req.params.id;
 	const val = req.params.val;
 	const postDocs = req.body;
 	(async () => {
 		try {
-			const url = "https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCatDoc/" + idCategory + "/" + val + "?keyclavy=3023896634743";
+			const url = "https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCatDoc/" + idCategory + "/" + val + "?keyclavy=" + process.env.API_KEY;
 			const response = await axios.post(url,postDocs);
 			res.json(response.data);
 		} catch (error) {
@@ -123,7 +125,7 @@ app.post("/api/categoria/:id", (req, res) => {
 	const postDocs = req.body;
 	(async () => {
 		try {
-			const url = "https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCat/" + idCategory + "?keyclavy=3023896634743"
+			const url = "https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCat/" + idCategory + "?keyclavy=" + process.env.API_KEY;
 			const response = await axios.post(url,postDocs);
 			res.json(response.data);
 		} catch (error) {
@@ -140,7 +142,7 @@ app.post("/api/categoria/:id/valor", (req, res) => {
 	const postDocs = req.body;
 	(async () => {
 		try {
-			const url = "https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCat/" + idCategory + "/valor?keyclavy=3023896634743";
+			const url = "https://clavy.fdi.ucm.es:8181/Clavy/rest/odamobil/getCat/" + idCategory + "/valor?keyclavy=" + process.env.API_KEY;
 			const response = await axios.post(url,postDocs);
 			res.json(response.data);
 		} catch (error) {
