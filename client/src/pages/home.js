@@ -6,7 +6,7 @@ const Home = () => {
         <Container fluid>
             <section className="pb-5">
                 <h1 style={{color:'#ce7976'}}>Diccionario Didáctico Digital de Latín</h1>
-                <img src="/img/banner-estudiantes.jpg" className="img-fluid mt-3" alt="Banner de estudiantes"></img>
+                <img src="img/banner-estudiantes.jpg" className="img-fluid mt-3" alt="Banner de estudiantes"></img>
             </section>
             <section className="pb-4">
                 <h2>El diccionario...</h2>

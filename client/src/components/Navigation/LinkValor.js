@@ -15,7 +15,7 @@ const LinkValor = ({setIdDocs, categoria, valor, postDocs}) => {
         async function getDocsFromValor() {
             try {
                 let res = await axios({
-                    url: `/api/documentos/categoria/${categoria.id}/valor/${valor.name}`,
+                    url: `http://localhost:3001/api/documentos/categoria/${categoria.id}/valor/${valor.name}`,
                     method: 'post',
                     data: postDocs,
                     timeout: 8000,
@@ -40,7 +40,7 @@ const LinkValor = ({setIdDocs, categoria, valor, postDocs}) => {
         async function getNextFromValor() {
             try {
                 let res = await axios({
-                    url: `/api/categoria/${categoria.id}/valor`,
+                    url: `localhost:3001/api/categoria/${categoria.id}/valor`,
                     method: 'post',
                     data: tmpIdDocs,
                     timeout: 8000,

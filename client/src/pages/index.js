@@ -17,32 +17,32 @@ import PublicacionesRelacionadas from './footer/publicaciones-relacionadas';
 
 const Pages = ({diccionario}) => {
     return(
-        <Router>
-            <Route exact path="/">
+        <Router basename={'/ddd-latin'}>
+            <Route exact path="">
                 <Home></Home>
             </Route>
-            <Route path="/buscar">
+            <Route path={'/buscar'}>
                 <Search diccionario={diccionario} />
             </Route>
-            <Route path="/categorias">
+            <Route path={'/categorias'}>
                 <Categorias diccionario={diccionario} />
             </Route>
-            <Route path="/busqueda-avanzada">
+            <Route path={'/busqueda-avanzada'}>
                 <AdvancedSearch />
             </Route>
-            <Route path="/pautas-uso">
+            <Route path={'/pautas-uso'}>
                 <PautasUso />
             </Route>
-            <Route path="/iconos">
+            <Route path={'/iconos'}>
                 <PautasUsoIcono />
             </Route>
-            <Route path="/abreviaturas">
+            <Route path={'/abreviaturas'}>
                 <PautasUsoAbreviaturas />
             </Route>
-            <Route path="/equipo-trabajo">
+            <Route path={'/equipo-trabajo'}>
                 <EquipoTrabajo />
             </Route>
-            <Route path="/publicaciones-relacionadas">
+            <Route path={'/publicaciones-relacionadas'}>
                 <PublicacionesRelacionadas />
             </Route>
         </Router>

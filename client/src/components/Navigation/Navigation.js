@@ -17,7 +17,7 @@ const Navigation = ({setIdDocs}) => {
         async function getCategoriesBase() {
             try {
                 let res = await axios({
-                    url: `/api/categorias`,
+                    url: `http://localhost:3001/api/categorias`,
                     method: 'get',
                     timeout: 8000,
                     headers: {
@@ -66,7 +66,7 @@ const Navigation = ({setIdDocs}) => {
                     <Loading />
                 ) : (
                     <div className="d-grid gap-2">
-                        <Button variant="outline-secondary" href="/categorias">
+                        <Button variant="outline-secondary" href="categorias">
                             Reiniciar
                         </Button>
                         {

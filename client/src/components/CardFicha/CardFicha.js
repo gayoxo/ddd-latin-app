@@ -15,7 +15,7 @@ const CardFicha = ({ word }) => {
     <Container fluid>
       <Row>
         <Col xs={12} className="d-flex justify-content-center">
-          <Image className="img-fluid icon-ficha" src={word.ico==="" ? '/img/ico_ov.gif' : word.ico} roundedCircle />
+          <Image className="img-fluid icon-ficha" src={word.ico==="" ? 'img/ico_ov.gif' : word.ico} roundedCircle />
         </Col>
         <Col xs={12} className="d-flex justify-content-center p-3">
           <span className="badge bg-secondary pl-3">{word.id}</span>

@@ -23,7 +23,7 @@ const CardResult = ({ result }) => {
       <ListGroup.Item as="li">
         <Row className="align-items-center">
           <Col xs={12} md={2} className="d-flex justify-content-center">
-            <Image src={result.ico==="" ? '/img/ico_ov.gif' : result.ico} fluid className="icon-result mx-auto d-block"/>
+            <Image src={result.ico==="" ? 'img/ico_ov.gif' : result.ico} fluid className="icon-result mx-auto d-block"/>
           </Col>
           <Col xs={12} md={8} className="p-2">
             <div className="mb-1">

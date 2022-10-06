@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <Navbar bg="white" expand="lg" className="py-3">
             <Container fluid>
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="">
                     <img
                         src={logo}
                         width="200"
@@ -20,8 +20,8 @@ const Header = () => {
                         className="me-auto my-2 my-lg-0 d-flex justify-content-center"
                         navbarScroll
                     >
-                        <Nav.Link href="/buscar">Buscar por palabra</Nav.Link>
-                        <Nav.Link href="/categorias">Navegar</Nav.Link>
+                        <Nav.Link href="buscar">Buscar por palabra</Nav.Link>
+                        <Nav.Link href="categorias">Navegar</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

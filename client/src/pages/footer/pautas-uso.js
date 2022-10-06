@@ -15,7 +15,7 @@ const PautasUso = () => {
                 </Col>
             </Row>
             <div className="pb-4">
-                <img src="/img/iconos-diccionario.jpg" className="img-fluid mt-3" alt="Iconos del diccionario"></img>
+                <img src="img/iconos-diccionario.jpg" className="img-fluid mt-3" alt="Iconos del diccionario"></img>
             </div>
             <div className="pb-4">
                 <iframe width="400" height="315" src="https://www.youtube.com/embed/qhcH0tNRbZA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

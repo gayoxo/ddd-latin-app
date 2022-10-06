@@ -14,7 +14,7 @@ const LinkCategoria = ({setIdDocs, categoria, postDocs}) => {
         async function getNextFromCategory() {
             try {
                 let res = await axios({
-                    url: `/api/categoria/${categoria.id}`,
+                    url: `http://localhost:3001/api/categoria/${categoria.id}`,
                     method: 'post',
                     data: postDocs,
                     timeout: 8000,
