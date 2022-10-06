@@ -1,0 +1,11 @@
+El sistema esta preparado para funcionar en una subcarpeta para lo cual hay que modificar el nombre de la subcarpeta "ddd-latin" en ciertos puntos de archivos del codigo antes de empezar.
+
+
+client/package.json
+>>> "homepage": "ddd-latin", 
+
+client\src\pages\index.js
+>>> <Router basename={'/ddd-latin'}>
+
+client\public\.htaccess
+>>> RewriteBase /ddd-latin/
