@@ -22,7 +22,7 @@ function App() {
       try {
         const consulta = await axios({
           method: 'get',
-          url: `http://localhost:3001/api/documentos`,
+          url: `http://`+process.env.REACT_APP_SERVERHOST+`:3001/api/documentos`,
           data: []
         });
         setDiccionario(consulta.data);

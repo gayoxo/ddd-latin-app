@@ -16,7 +16,7 @@ const LinkCategoriaBase = ({setIdDocs, categoria, setCategoriaVisible}) => {
         async function getDocsFromCategoria() {
             try {
                 let res = await axios({
-                    url: `http://localhost:3001/api/documentos/categoria/${categoria.id}`,
+                    url: `http://`+process.env.REACT_APP_SERVERHOST+`:3001/api/documentos/categoria/${categoria.id}`,
                     method: 'get',
                     timeout: 8000,
                     headers: {
@@ -40,7 +40,7 @@ const LinkCategoriaBase = ({setIdDocs, categoria, setCategoriaVisible}) => {
         async function getNextFromCategory() {
             try {
                 let res = await axios({
-                    url: `http://localhost:3001/api/categoria/${categoria.id}`,
+                    url: `http://`+process.env.REACT_APP_SERVERHOST+`:3001/api/categoria/${categoria.id}`,
                     method: 'post',
                     data: postDocs,
                     timeout: 8000,
