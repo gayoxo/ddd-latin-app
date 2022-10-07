@@ -11,7 +11,7 @@ const Ficha = (id) => {
 
   useEffect(() => {
     ///const baseURL = `/data/getdoc/${id.id}.json`;
-    const baseURL = `localhost:3001/api/documento/${id.id}`;
+    const baseURL = `/ddd-latin-php/api/documento.php?idDoc=${id.id}`;
     
     console.log(baseURL);
     axios.get(baseURL).then((response) => {
