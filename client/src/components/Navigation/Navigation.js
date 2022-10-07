@@ -17,7 +17,7 @@ const Navigation = ({setIdDocs}) => {
         async function getCategoriesBase() {
             try {
                 let res = await axios({
-                    url: `http://`+process.env.REACT_APP_SERVERHOST+`:3001/api/categorias`,
+                    url: `http://`+process.env.REACT_APP_SERVERHOST+`:`+process.env.REACT_APP_SERVERPORT+`/api/categorias`,
                     method: 'get',
                     timeout: 8000,
                     headers: {
