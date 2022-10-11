@@ -1,6 +1,8 @@
 node_modules
 dist
 .env
+keypass.php
+
 
 # local env files
 .env.local
