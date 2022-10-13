@@ -9,7 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	if (isset($_GET["idCategory"])&&isset($_GET["val"]))
 	{
 		$idCategory=$_GET["idCategory"];
-		$val=$_GET["val"];
+		
+		
+		$val = 
+		str_replace("+", '%21%21', $_GET["val"]);
+		
+
+		$val=urlencode($val);
 		
 		$data = file_get_contents('php://input');
 		

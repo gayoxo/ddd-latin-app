@@ -13,9 +13,13 @@ const LinkValor = ({setIdDocs, categoria, valor, postDocs}) => {
 
     useEffect(() => {
         async function getDocsFromValor() {
+			
+			let text = `${valor.name}`;
+			let resulttext = text.replace(/\+/igm, "%2b");
+			
             try {
                 let res = await axios({
-                    url: `/ddd-latin-php/api/documentos/categoria/valor.php?idCategory=${categoria.id}&&val=${valor.name}`,
+                    url: `/ddd-latin-php/api/documentos/categoria/valor.php?idCategory=${categoria.id}&&val=`+resulttext,
                     method: 'post',
                     data: postDocs,
                     timeout: 8000,
