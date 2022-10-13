@@ -17,7 +17,7 @@ const Navigation = ({setIdDocs}) => {
         async function getCategoriesBase() {
             try {
                 let res = await axios({
-                    url: `/ddd-latin-php/api/categorias.php`,
+                    url: `/`+process.env.REACT_APP_BACKENDFOLDER+`/api/categorias.php`,
                     method: 'get',
                     timeout: 8000,
                     headers: {

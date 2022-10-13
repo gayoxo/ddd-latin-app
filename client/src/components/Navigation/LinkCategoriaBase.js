@@ -16,7 +16,7 @@ const LinkCategoriaBase = ({setIdDocs, categoria, setCategoriaVisible}) => {
         async function getDocsFromCategoria() {
             try {
                 let res = await axios({
-                    url: `/ddd-latin-php/api/documentos/categoria.php?idCategory=${categoria.id}`,
+                    url: `/`+process.env.REACT_APP_BACKENDFOLDER+`/api/documentos/categoria.php?idCategory=${categoria.id}`,
                     method: 'get',
                     timeout: 8000,
                     headers: {
@@ -40,7 +40,7 @@ const LinkCategoriaBase = ({setIdDocs, categoria, setCategoriaVisible}) => {
         async function getNextFromCategory() {
             try {
                 let res = await axios({
-                    url: `/ddd-latin-php/api/categoria.php?idCategory=${categoria.id}`,
+                    url: `/`+process.env.REACT_APP_BACKENDFOLDER+`/api/categoria.php?idCategory=${categoria.id}`,
                     method: 'post',
                     data: postDocs,
                     timeout: 8000,

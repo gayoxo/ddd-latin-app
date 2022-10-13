@@ -14,7 +14,7 @@ const LinkCategoria = ({setIdDocs, categoria, postDocs}) => {
         async function getNextFromCategory() {
             try {
                 let res = await axios({
-                    url: `/ddd-latin-php/api/categoria.php?idCategory=${categoria.id}`,
+                    url: `/`+process.env.REACT_APP_BACKENDFOLDER+`/api/categoria.php?idCategory=${categoria.id}`,
                     method: 'post',
                     data: postDocs,
                     timeout: 8000,
