@@ -18,7 +18,7 @@ import PublicacionesRelacionadas from './footer/publicaciones-relacionadas';
 const Pages = ({diccionario}) => {
     return(
         <Router basename={'/ddd-latin'}>
-            <Route exact path="">
+            <Route exact path="/">
                 <Home></Home>
             </Route>
             <Route path={'/buscar'}>

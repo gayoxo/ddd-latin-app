@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from '../../images/logo-ddl.jpg';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import packageJson from '../../../package.json';
+
 
 const Header = () => {
     return (
         <Navbar bg="white" expand="lg" className="py-3">
             <Container fluid>
-                <Navbar.Brand href="">
+                <Navbar.Brand href={"/"+packageJson.homepage}>
                     <img
                         src={logo}
                         width="200"
